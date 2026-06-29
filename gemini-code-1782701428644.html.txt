@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK Agency Exclusive 'Mega Grow' Offer</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f8fafc;
+            background-color: #0f0b21;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .offer-container {
+            width: 100%;
+            max-width: 1200px;
+            border: 3px solid #eab308;
+            border-radius: 16px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #1e113a 0%, #0f0b21 100%);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #eab308;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 10px 0;
+            text-shadow: 0 3px 10px rgba(234, 179, 8, 0.4);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .card.prime {
+            border-color: #eab308;
+            background-color: rgba(234, 179, 8, 0.02);
+            box-shadow: 0 0 15px rgba(234, 179, 8, 0.1);
+        }
+        
+        .card.mega {
+            border-color: #a855f7;
+            background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, rgba(15, 11, 33, 0.5) 100%);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+        }
+        
+        .badge {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .card.prime .badge { color: #eab308; }
+        .card.mega .badge { color: #c084fc; font-weight: 900; }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        
+        .card.mega .card-title { color: #f43f5e; }
+        
+        .strike-price {
+            font-size: 1rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+        
+        .actual-price {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 25px 0;
+        }
+        
+        .bullet-list {
+            text-align: left;
+            padding-left: 20px;
+            margin: 0 0 20px 0;
+            font-size: 1rem;
+            color: #e2e8f0;
+        }
+        
+        .bullet-list li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-bar {
+            border-top: 2px solid #2e1f4d;
+            padding-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .footer-left {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .date-claim {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #f43f5e;
+            text-transform: uppercase;
+            margin: 0 0 8px 0;
+            letter-spacing: 0.5px;
+        }
+        
+        .date-range {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0;
+            background-color: #1e1b4b;
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 6px;
+            border: 1px dashed #eab308;
+        }
+        
+        .metric-box {
+            background-color: #0f172a;
+            border: 2px solid #eab308;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 130px;
+        }
+        
+        .metric-val {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #34d399;
+        }
+        
+        .metric-lbl {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+        
+        .contact-line {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .cta-link {
+            color: #eab308;
+            text-decoration: none;
+            border-bottom: 2px solid #eab308;
+            padding-bottom: 2px;
+            transition: color 0.3s;
+        }
+
+        .cta-link:hover {
+            color: #a855f7;
+            border-color: #a855f7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="offer-container">
+    <div class="header">
+        <h1 class="main-title">The TK Agency Exclusive 'Mega Grow' Offer!</h1>
+        <p class="subtitle">Launch Your Digital Presence with Unbeatable Value</p>
+    </div>
+    
+    <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="card">
+            <div>
+                <div class="badge">Standard & Boost Focus</div>
+                <h2 class="card-title">The Instant Boost Bundle</h2>
+                <div class="strike-price">Standard Pack for Rs. 3,700?</div>
+                <div class="actual-price">NO, Rs. 3,100!</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Guaranteed 60k-80k Views Per Video</li>
+                <li>Full Account Boost (Reach & Engagement)</li>
+                <li>Professional Campaign Monitoring</li>
+            </ul>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card prime">
+            <div>
+                <div class="badge">VIP & Prime Focus</div>
+                <h2 class="card-title">The Prime Visibility Pack</h2>
+                <div class="strike-price">Package 3 for Rs. 4,900?</div>
+                <div class="actual-price">NO, Rs. 4,200!</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Guaranteed 180k+ Views Per Video</li>
+                <li>15k Targeted Followers Guaranteed</li>
+                <li>Complete Profile Optimization (Faceless Account Expert Set-Up)</li>
+            </ul>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card mega">
+            <div>
+                <div class="badge">All-In & Elite Focus - Best Value</div>
+                <h2 class="card-title">The 'Mega Grow' Complete Suite</h2>
+                <div class="strike-price">Get EVERYTHING for ONLY Rs. 8,600?</div>
+                <div class="actual-price" style="color: #eab308;">ONLY Rs. 6,500!</div>
+            </div>
+            <ul class="bullet-list">
+                <li>Combine <b>both</b> Prime Visibility and Instant Boost benefits</li>
+                <li>Double the Views Guarantee (up to 360k+ total)</li>
+                <li>25k+ Total Targeted Followers</li>
+                <li>Elite 1-on-1 Niche Strategy Consultation & Priority Support for 1 Year</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <div class="footer-left">
+            <p class="date-claim">Limited Time Only! Act Fast!</p>
+            <div class="date-range">OFFER VALID FROM JUN 29 TO AUG 29, 2026</div>
+        </div>
+        
+        <div class="footer-right">
+            <div class="metric-box">
+                <div class="metric-val">360K+</div>
+                <div class="metric-lbl">Mega Views</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-val">+25K</div>
+                <div class="metric-lbl">Followers Added</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-line">
+        Scaling Your Brand Professionally • <a href="https://wa.me/YOUR_NUMBER" class="cta-link" target="_blank">WhatsApp & DM us to secure your spot now!</a>
+    </div>
+</div>
+
+</body>
+</html>
